@@ -5,8 +5,8 @@ body {
 
 @media only screen and (min-width: 768px) {
   .ui.container {
-    width: 700px;
-    max-width: 700px;
+    width: 1500px;
+    max-width: 1500px;
   }
 
   nav.ui.container .ui.header {
@@ -43,19 +43,18 @@ nav.ui.container .ui.inverted.compact.menu .item {
 
 nav.ui.container .ui.inverted.compact.menu .active.item {
   background-color: inherit;
-  border-bottom-color: white;
+  border-bottom-color: #E28F7D;
   border-bottom-style: solid;
   border-bottom-width: 2px;
 }
 
 .ui.inverted.vertical.segment {
-  height: 100vh;
+  /* height: 100vh; */
   background-color: #E28F7D
 }
 
 .ui.content.container {
-  height: 300px;
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   bottom: 0;
   left: 0;
@@ -64,7 +63,7 @@ nav.ui.container .ui.inverted.compact.menu .active.item {
 }
 
 .ui.content.container h1.header {
-  font-size: 36px;
+  font-size: 36pt;
 }
 
 .ui.content.container p {
@@ -83,5 +82,5 @@ nav.ui.container .ui.inverted.compact.menu .active.item {
 }
 
 .ui.inverted.vertical.segment footer.ui.segment a {
-  color: white;
+  color: #E28F7D
 }

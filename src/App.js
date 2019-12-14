@@ -1,20 +1,20 @@
 import React from "react";
 import "semantic-ui-css/semantic.min.css";
-// import { connect } from "react-redux";
+import { connect } from "react-redux";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import { Grid } from "semantic-ui-react";
 
 import Homepage from "./components/dashboard/HomePage";
 
-// import { fetchAllUsers } from "./store/users/actions";
-// import { fetchAllVideos } from "./store/videos/actions";
+import { fetchAllPosts } from "./store/blog_posts/actions";
+
 
 class App extends React.Component {
-  // componentDidMount() {
-  //   this.props.fetchAllUsers();
-  //   this.props.fetchAllVideos();
-  // }
+  componentDidMount() {
+    this.props.fetchAllPosts();
+
+  }
 
   render() {
     return (
@@ -32,4 +32,12 @@ class App extends React.Component {
 }
 
 
-export default App
+const mapStateToProps = state => {
+  return {
+    blog_posts: state.blog_posts,
+  };
+};
+
+export default connect(mapStateToProps, {
+  fetchAllPosts
+})(App);
