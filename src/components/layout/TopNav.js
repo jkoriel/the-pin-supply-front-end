@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Container, Header, Menu } from "semantic-ui-react"
 
 export const TopNav = props => (
-    <Container as="nav" >
+    <Container as="nav" style={{ marginBottom: "150px" }}>
         <Header inverted as="h1">
             The Pin Supply
         </Header>

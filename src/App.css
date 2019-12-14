@@ -1,6 +1,7 @@
 body {
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: grayscale;
+  background-color: #E28F7D
 }
 
 @media only screen and (min-width: 768px) {
@@ -74,7 +75,7 @@ nav.ui.container .ui.inverted.compact.menu .active.item {
 }
 
 .ui.inverted.vertical.segment footer.ui.segment {
-  height: 80px;
+  /* height: 80px; */
   width: 100%;
   position: absolute;
   bottom: 0;
