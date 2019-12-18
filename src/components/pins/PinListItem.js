@@ -1,7 +1,6 @@
 import React from 'react'
 import { Button, Icon, Item, Container } from 'semantic-ui-react'
 
-
 const PinListItem = ({ pin }) => (
     <Container>
         <Item.Group >
