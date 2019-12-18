@@ -9,14 +9,14 @@ import { addPost } from "../../store/blog_posts/actions"
 const adminPortal = props => {
     const customer = props.customers[0]
 
-    handleSubmit = e => {
-        e.preventDefault();
-        this.props.dispatch(
-            addPost({
-                content: this.state.newPost
-            })
-        );
-    };
+    // // handleSubmit = e => {
+    // //     e.preventDefault();
+    // //     this.props.dispatch(
+    // //         addPost({
+    // //             content: this.state.newPost
+    // //         })
+    // //     );
+    // };
 
     return (
         <Segment inverted vertical >
@@ -49,7 +49,7 @@ const adminPortal = props => {
                     </Item.Content>
                 </Item>
             </Item.Group>
-            <Form onSubmit={this.handleSubmit} style={{ marginLeft: "500px" }}>
+            <Form style={{ marginLeft: "500px" }}>
                 <Form.Group>
                     <Form.TextArea onChange={e => this.setState({ newPost: e.target.value })} style={{ backgroundColor: "#E28F7D", color: "white" }} label='Submit Blog Post' />
                 </Form.Group>
