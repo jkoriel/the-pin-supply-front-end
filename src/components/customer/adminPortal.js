@@ -1,12 +1,23 @@
 import React from "react";
 import "semantic-ui-css/semantic.min.css";
-import { Segment, List, Item, Header } from "semantic-ui-react";
+import { Segment, List, Item, Header, Form, Button } from "semantic-ui-react";
 import "../../App.css";
 import { TopNav } from "../layout/TopNav";
 import { connect } from "react-redux";
+import { addPost } from "../../store/blog_posts/actions"
 
 const adminPortal = props => {
     const customer = props.customers[0]
+
+    handleSubmit = e => {
+        e.preventDefault();
+        this.props.dispatch(
+            addPost({
+                content: this.state.newPost
+            })
+        );
+    };
+
     return (
         <Segment inverted vertical >
             <TopNav />
@@ -38,7 +49,13 @@ const adminPortal = props => {
                     </Item.Content>
                 </Item>
             </Item.Group>
-        </Segment>
+            <Form onSubmit={this.handleSubmit} style={{ marginLeft: "500px" }}>
+                <Form.Group>
+                    <Form.TextArea onChange={e => this.setState({ newPost: e.target.value })} style={{ backgroundColor: "#E28F7D", color: "white" }} label='Submit Blog Post' />
+                </Form.Group>
+                <Button inverted>Submit</Button>
+            </Form>
+        </Segment >
     )
 }
 const mapStateToProps = state => {
